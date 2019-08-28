@@ -1,0 +1,15 @@
+product_json = []
+
+@products.each do |product|
+  product_hash = {
+    name: product.name, 
+    price: product.price, 
+    image_url: product.image_url, 
+    description: product.description
+  }
+
+  product_json << product_hash
+
+end
+
+return product_json
