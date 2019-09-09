@@ -1,19 +1,19 @@
-product_json = []
-
-@products.each do |product|
-  product_hash = {
+@products.map do |product|
+  {
     id: product.id, 
-    name: product.name, 
+    name: product.name,
     price: product.price, 
-    image_url: product.image_url, 
-    description: product.description
+    price_data: {
+      price: product.price,
+      tax: product.tax, 
+      total: product.total
+    },  
+  is_discounted?: product.is_discounted?, 
+  description: product.description
   }
 
-  product_json << product_hash
 
 end
-
-return product_json
 
 # {
 #   id: @product.id,

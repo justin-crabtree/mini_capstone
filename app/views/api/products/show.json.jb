@@ -7,7 +7,6 @@
     tax: @product.tax, 
     total: @product.total
   },  
-  is_discounted?: @product.is_discounted?,  
-  image_url: @product.image_url, 
+  is_discounted?: @product.is_discounted?, 
   description: @product.description
 }
