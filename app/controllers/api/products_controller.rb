@@ -12,7 +12,7 @@ class Api::ProductsController < ApplicationController
     if params[:is_discounted?]
       @products = @products.where("price < ?", 60)
     end 
-    render 'product.json.jb'
+    render 'index.json.jb'
   end
 
   def show
@@ -25,7 +25,6 @@ class Api::ProductsController < ApplicationController
       id: params[:id], 
       name: params[:name], 
       price: params[:price].to_i, 
-      image_url: params[:image_url], 
       description: params[:description]
       )
     if @product.save
@@ -40,7 +39,6 @@ class Api::ProductsController < ApplicationController
 
     @product.name = params[:name] || @product.name
     @product.price = params[:price] || @product.price
-    @product.image_url = params[:image_url] || @product.image_url
     @product.description = params[:description] || @product.description
 
     if @product.save
