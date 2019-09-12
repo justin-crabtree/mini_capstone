@@ -1,5 +1,7 @@
 class Api::ProductsController < ApplicationController
 
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @products = Product.all
 
@@ -12,6 +14,12 @@ class Api::ProductsController < ApplicationController
     if params[:is_discounted?]
       @products = @products.where("price < ?", 60)
     end 
+
+    if params[:category]
+      category = Category.find_by("name iLike ?", params[:category])
+      @products = category.products
+    end
+
     render 'index.json.jb'
   end
 

@@ -1,0 +1,14 @@
+{
+  id: product.id, 
+  name: product.name,
+  price: product.price, 
+  price_data: {
+    price: product.price,
+    tax: product.tax, 
+    total: product.total
+  },
+  supplier: product.supplier.name,   
+  is_discounted?: product.is_discounted?, 
+  description: product.description, 
+  logged_in: current_user
+}
