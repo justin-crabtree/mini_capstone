@@ -1,6 +1,7 @@
 {
   id: product.id, 
   name: product.name,
+  images: product.images, 
   price: product.price, 
   price_data: {
     price: product.price,
