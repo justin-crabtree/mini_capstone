@@ -1,20 +1,23 @@
 <h1>New Product</h1>
 
 <form action="/products" method="post">
-  <div>
-    Name: <input type="text" name="name">
+  <div class="form-group col-xl-8">
+    <label for="formGroupExampleInput">Name</label>
+    <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="This is the name of a game">
   </div>
-  <div>
-    Description: <input type="text" name="description">
+  <div class="form-group col-xl-8">
+    <label for="formGroupExampleInput">Description</label>
+    <input type="text" name="description" class="form-control" id="formGroupExampleInput" placeholder="This is what you do in the game">
   </div>
-  <div>
-    Price: <input type="decimal" name="price">
+  <div class="form-group col-xl-8">
+    <label for="formGroupExampleInput">Price</label>
+    <input type="decimal" name="price" class="form-control" id="formGroupExampleInput" placeholder="This is how much it costs">
   </div>
-    <div>
-    Supplier ID: <input type="number" name="supplier_id">
+  <div class="form-group col-xl-8">
+    <label for="formGroupExampleInput">Supplier ID</label>
+    <input type="number" name="supplier_id" class="form-control" id="formGroupExampleInput" placeholder="This is the ID of who sells it">
   </div>
   <div>
     <input type="submit" value="Create Product">
   </div>
-
 </form>
