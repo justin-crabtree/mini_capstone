@@ -7,10 +7,6 @@ User.create!([
   {name: "Alexis", email: "acrabtree@gmail.com", password_digest: "$2a$12$eeJ3vbaylW8fPlRoWLDDF.VumRqRHRNSLpelMGbUHkAf0A17Zq.ue", admin: false},
   {name: "Justin", email: "jcrabtree@gmail.com", password_digest: "$2a$12$jpAb3BDlGuavmIpSbQjcu.pMQqppa55SQbQz1.YKiFYm2/aw9FCp6", admin: true}
 ])
-Order.create!([
-  {user_id: 1, subtotal: "120.0", tax: "10.8", total: "130.8"},
-  {user_id: 1, subtotal: "160.0", tax: "14.4", total: "174.4"}
-])
 Supplier.create!([
   {name: "Amazon", email: "amazon@gmail.com", phone_number: "223-445-6677"},
   {name: "Gamestop", email: "gamestop@gmail.com", phone_number: "123-908-4789"}
@@ -23,6 +19,10 @@ Product.create!([
   {name: "Pokemon Sword and Shield", price: "60.0", description: "Similar to many previous entries in the Pokémon franchise, the player embarks on a journey to become the strongest trainer in the Galar Region. Starting alongside their neighbor and rival Hop, the player receives one of three Pokémon from the local Professor Magnolia. After receiving a letter of endorsement from Champion Leon, they face off against the Gym Leaders of each town, including Milo, Nessa, Bea, and Allister, and aim to take part in the Champions Cup. The gyms showcase Dynamax and Gigantamax Pokémon, implemented by the Galar Pokémon League Chairman, Rose.", in_stock: true, supplier_id: 1},
   {name: "The Legend of Zelda: Link's Awakening", price: "60.0", description: "It is a remake of the 1993 game for the Game Boy that retains the original title's top-down perspective and gameplay, along with elements from the 1998 remaster Link's Awakening DX. The remake features a \"retro-modern\" art style unique within the series with toy-like character designs, diorama-like world designs, and tilt-shift visuals that evoke the original game's presentation on the Game Boy. It also features customizable dungeons which the player can create and then complete for rewards.", in_stock: true, supplier_id: 2},
   {name: "Final Fantasy 7 Remake", price: "60.0", description: "A remake of the classic RPG series for modern platforms.", in_stock: true, supplier_id: 1}
+])
+Order.create!([
+  {user_id: 1, subtotal: "120.0", tax: "10.8", total: "130.8"},
+  {user_id: 1, subtotal: "160.0", tax: "14.4", total: "174.4"}
 ])
 Image.create!([
   {url: "https://static.gamespot.com/uploads/original/1591/15918215/3545029-cyberpunk_02.jpg", product_id: 1}
